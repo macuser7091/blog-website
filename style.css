@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Faustina:ital,wght@0,300..800;1,300..800&family=Forum&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Markazi+Text:wght@400..700&family=Poppins:wght@300;400;500&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+}
+a {
+    font-family: "Poppins", sans-serif;
+}
+.topic {
+    color: #999999;
+    font-size: 14px;
+}
+.author {
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: auto;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 90px;
+}
+
+.mainlogo img {
+    height: 50px;
+}
+
+header nav a {
+    padding: 10px 20px;
+    color: black;
+    font-size: 15px;
+    font-weight: 100;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    /* padding: 10px 15px; */
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: #141414;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 80%; /* Hover करने पर underline show होगी */
+    /* padding-left: 20px; */
+}
+
+
+main a:not(.no-underline) {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    /* padding: 10px 15px; */
+    /* display: flex;
+    width: max-content; */
+}
+
+main a:not(.no-underline)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #141414;
+    transition: width 0.3s ease;
+}
+
+main a:not(.no-underline):hover::after {
+    width: 100%; /* Hover करने पर underline show होगी */
+    /* padding-left: 20px; */
+}
+
+
+
+main {
+    margin: auto;
+    padding-top: 130px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+main .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 50px;
+    padding: 20px 0;
+    font-family: "Cinzel", sans-serif;
+    margin: auto;
+}
+.top img {
+    width: 60%;
+}
+.text {
+    align-self: flex-start;
+    padding-top: 7px;
+}
+.top .text p {
+    font-family: "Sorts Mill Goudy", sans-serif;
+    font-size: 17px;
+    padding: 20px 0;
+}
+.text h2 {
+    padding-top: 7px;
+}
+
+main .first {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.boxmain {
+    /* width: 33.33333333%; */
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: calc(33.333% - 20px); /* 3 boxes ek line me */
+    box-sizing: border-box;
+}
+.boxmain img {
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: block;
+    height: 255px;
+    /* min-height: 255px; */
+
+    object-fit: cover;
+}
+.ftb h2 {
+    font-size: 17px;
+    padding: 15px 0;
+}
+
+
+.custom-line {
+    width: 100%; /* Full width */
+    max-width: 1200px;
+    height: 2px; /* Line ki thickness */
+    background-color: #e6e6e6; /* Line ka color */
+    border: none; /* Default border hatane ke liye */
+    margin: 55px auto; /* Upar niche gap */
+}
+
+
+main .homelatest {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 0; 
+}
+
+.latest {
+    width: 25%; 
+    padding: 14px 5px; 
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.latest img {
+    width: 100%;
+    height: 170px; 
+    object-fit: cover;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.homelatest {
+    display: flex;
+    flex-wrap: wrap; /* Items को multiple rows में डालने के लिए */
+    row-gap: 20px; /* Items के बीच gap */
+}
+
+.homelatest > * {
+    flex: 1 1 calc(25% - 20px); /* Default में 4 items ek row me */
+    box-sizing: border-box;
+    /* background: lightgray; */
+    padding: 5px;
+    /* text-align: center; */
+}
+
+/* पहला item पूरी width लेगा */
+.homelatest > *:first-child {
+    flex: 1 1 100%;
+}
+
+.no-underline {
+    text-align: center;
+}
+
+.ltb {
+    padding: 8px 0; /* Text aur image ke beech spacing aur reduce ki */
+    /* text-align: center; */
+}
+
+.ltb h2 {
+    font-size: 14px; /* Font thoda chhota kiya taaki spacing aur control ho */
+    padding: 5px 0;
+    margin: 0;
+}
+
+.ltb a {
+    /* display: block; */
+    margin: 2px 0; /* Links ke beech ka gap bhi kam kiya */
+}
+
+/* #btn1 {
+    border: 1px solid black;
+    padding: 16px 17px;
+    align-self: center;
+    width: auto;
+    cursor: pointer;
+    margin: 50px 30px 30px 30px;
+} */
+#btn1 {
+    padding: 16px 20px;
+    margin: 50px 30px 30px 30px;
+    font-size: 16px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0px 5px 0px #ffffff;
+    transition: all 0.1s ease-in-out;
+}
+
+#btn1:active {
+    box-shadow: 0px 2px 0px #999999; /* Click करने पर shadow छोटी होगी */
+    transform: translateY(3px); /* Button थोड़ा दबेगा */
+    background-color: #141414;
+    color: #ffffff;
+}
+
+
+
+
+.featured {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Extra space hatane ke liye */
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 0;
+    column-gap: 10px;
+}
+.last {
+    width: 49%; /* Thoda adjust kiya taaki ek line me fit ho */
+    /* padding: 5px; Minimum padding */
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.last img {
+    width: 100%;
+    height: 350px; /* Thodi height bhi adjust ki */
+    object-fit: cover;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.featured {
+    display: flex;
+    flex-wrap: wrap; /* Items को multiple rows में डालने के लिए */
+    row-gap: 20px; /* Items के बीच gap */
+}
+
+.featured > * {
+    flex: 1 1 calc(50% - 20px); /* Default में 4 items ek row me */
+    box-sizing: border-box;
+    /* background: lightgray; */
+    padding: 5px;
+    /* text-align: center; */
+}
+
+/* पहला item पूरी width लेगा */
+.featured > *:first-child {
+    flex: 1 1 100%;
+}
+.ptb {
+    padding: 5px;
+}
+.ptb a {
+    /* display: block; */
+    /* padding-top: 10px; */
+    margin: 7px 0; /* Links ke beech ka gap bhi kam kiya */
+}
+.ptb h2 {
+    font-size: 20px; /* Font thoda chhota kiya taaki spacing aur control ho */
+    padding: 12px 0;
+    margin: 0;
+}
+
+.topic {
+    /* margin: auto; */
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 7px;
+}
+
+
+footer {
+    background-color: #141414;
+    margin: auto;
+    color: #ffffff;
+    padding: 90px 30px;
+}
+footer .copyright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Extra space hatane ke liye */
+    align-items: flex-end;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 0;
+    color: #999999;
+    font-size: 13px;
+}
+.copyright p {
+    padding-bottom: 12px;
+}
+
+footer .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Extra space hatane ke liye */
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 13px;
+    column-gap: 50px;
+    
+}
+footer li {
+    list-style: none;
+    padding: 5px;
+}
+footer li a {
+    color: #ffffff;
+}
+.links p {
+    padding-bottom: 15px;
+    color: #999999;
+    font-size: 13px;
+}
+.input input {
+    height: 40px;
+    width: 230px;   
+    margin-top: 10px;
+}
+.input button {
+    height: 40px;
+    width: 70px;
+    cursor: pointer;
+}
+.input button:hover {
+    background-color: #999999;
+}
+
+
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .latest, .last {
+        width: 100%; /* Full width on mobile */
+    }
+    .boxmain {
+        width: 100%; /* Adjust grid layout */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    .mainlogo img {
+        height: 40px; /* Logo छोटा कर दिया */
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background: white;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+        padding: 10px;
+    }
+
+    .menu-toggle.active + nav {
+        display: flex;
+    }
+    
+
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .mainlogo img {
+        height: 35px; /* Logo छोटा कर दिया */
+    }
+
+    .menu-toggle {
+        font-size: 28px; /* Hamburger icon बड़ा कर दिया */
+    }
+
+    /* Content को center में लाने के लिए */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px; /* Header ke liye thoda space chhota kiya */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Images full-width और rounded edges */
+    img {
+        width: 100%;
+        height: auto;
+        /* border-radius: 10px; */
+    }
+
+    /* Headings और Text alignment */
+    h1, h2, h3, p {
+        text-align: left;
+        width: 100%;
+        max-width: 600px;
+    }
+    .latest, .featured {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Content full width aur center me ho */
+    .latest > *, .featured > * {
+        width: 100%;
+        max-width: 600px;
+        text-align: left;
+    }
+
+    /* Images ko responsive aur rounded edges dena */
+    .latest img, .featured img {
+        width: 100%;
+        height: auto;
+        /* border-radius: 10px; */
+    }
+
+    .homelatest {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+    }
+    .top img {
+        width: 100%;
+        /* padding-bottom: 5px; */
+    }
+    
+    main .top {
+        gap: 10px;
+    }
+
+    .copyright img {
+        width: 100px;
+        padding-bottom: 5px;
+
+    }
+    .copyright p {
+        margin-left: 7px;
+    }
+
+    footer {
+        /* width: 100%; */
+        padding: 50px 30px;
+    }
+}

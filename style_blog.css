@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Faustina:ital,wght@0,300..800;1,300..800&family=Forum&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Markazi+Text:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oldenburg&family=Poppins:wght@300;400;500&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sorts+Mill+Goudy:ital@0;1&family=Tienne:wght@400;700;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-family: "Tienne", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    padding-bottom: 18px;
+}
+
+p {
+    font-size: 20px;
+    font-family: "Sorts Mill Goudy", sans-serif;
+    padding-bottom: 7px;
+}
+
+a {
+    font-family: "Poppins", sans-serif;
+}
+
+.topic {
+    color: #999999;
+    font-size: 14px;
+}
+
+.author {
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: auto;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 90px;
+}
+
+.mainlogo img {
+    height: 50px;
+}
+
+header nav a {
+    padding: 20px;
+    color: black;
+    font-size: 15px;
+    font-weight: 100;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    /* padding: 10px 15px; */
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: #141414;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 80%; /* Hover करने पर underline show होगी */
+    /* padding-left: 20px; */
+}
+
+main {
+    margin: auto;
+    padding-top: 130px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.custom-line {
+    width: 100%; /* Full width */
+    max-width: 1200px;
+    height: 2px; /* Line ki thickness */
+    background-color: #e6e6e6; /* Line ka color */
+    border: none; /* Default border hatane ke liye */
+    margin: 55px auto; /* Upar niche gap */
+}
+
+.headingimg {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.blog img {
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: block;
+    height: 455px;
+    /* min-height: 255px; */
+
+    object-fit: cover;
+}
+
+.blog {
+    padding: 0 10px;
+}
+
+.contant {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.menu-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    .mainlogo img {
+        height: 40px; /* Logo छोटा कर दिया */
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background: white;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+        padding: 10px;
+    }
+
+    .menu-toggle.active + nav {
+        display: flex;
+    }
+    
+
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .mainlogo img {
+        height: 35px; /* Logo छोटा कर दिया */
+    }
+
+    .menu-toggle {
+        font-size: 28px; /* Hamburger icon बड़ा कर दिया */
+    }
+
+    main {
+        padding-top: 100px; /* Header ke liye thoda space chhota kiya */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    h1 {
+        font-size: 18px; /* Heading ka font size adjust kiya */
+        padding-bottom: 15px; /* Padding adjust kiya */
+    }
+
+    h2 {
+        font-size: 20px; /* Subheading ka font size adjust kiya */
+        padding-bottom: 10px; /* Padding adjust kiya */
+    }
+
+    p {
+        font-size: 16px; /* Paragraph ka font size adjust kiya */
+        padding-bottom: 10px; /* Padding adjust kiya */
+    }
+
+    .headingimg {
+        flex-direction: column; /* Image aur text ko ek column me stack kiya */
+        align-items: center; /* Content ko center align kiya */
+        gap: 10px; /* Gap adjust kiya */
+    }
+
+    .blog img {
+        height: auto; /* Image height ko flexible banaya */
+        max-height: 300px; /* Maximum height set kiya */
+    }
+
+    .blog {
+        padding: 0; /* Padding remove kiya */
+    }
+
+    .custom-line {
+        margin: 30px auto; /* Line ke upar neeche gap adjust kiya */
+    }
+}
